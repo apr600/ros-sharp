@@ -5,7 +5,7 @@ import numpy
 from geometry_msgs.msg import PointStamped
 
     
-def mouseToPos():
+def moveToPos():
 	# initialize node
 	rospy.init_node('moveToPos', anonymous = True)
 
@@ -25,8 +25,6 @@ def mouseToPos():
 		msg.point.x = 0.0
 		msg.point.y = 0.0
                 msg.point.z = 6.0
-                
-
 
                 ### Get New pos position and update message ###
                 pos_x, pos_y = move_drone(pos_x, pos_y)
@@ -51,4 +49,4 @@ def move_drone(x,y):
 
 
 if __name__ == '__main__':
-	mouseToPos()
+	moveToPos()
